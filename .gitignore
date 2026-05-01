@@ -43,7 +43,6 @@ config.json
 # Generated SVG / outputs
 # (important for your project)
 # ----------------------------
-*.svg
 output/
 build/
 dist/

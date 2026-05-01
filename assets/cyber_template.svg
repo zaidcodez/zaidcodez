@@ -1,0 +1,114 @@
+<svg width="1000" height="600" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Flicker -->
+    <filter id="flicker">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="1">
+        <animate attributeName="baseFrequency"
+                 values="0.8;0.82;0.78;0.8"
+                 dur="0.3s"
+                 repeatCount="indefinite"/>
+      </feTurbulence>
+      <feColorMatrix type="matrix">
+        <animate attributeName="values"
+                 values="
+                 1 0 0 0 0;
+                 0 1 0 0 0;
+                 0 0 1 0 0;
+                 0 0 0 1 0"
+                 dur="0.2s"
+                 repeatCount="indefinite"/>
+      </feColorMatrix>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="600" fill="#05070b"/>
+
+  <!-- Main frame -->
+  <rect x="30" y="30" width="940" height="540" rx="20" fill="#0b0f14"/>
+  <rect x="60" y="60" width="880" height="480" rx="15" fill="#070b10" stroke="#00ff88" stroke-opacity="0.2"/>
+
+  <!-- Top bar -->
+  <rect x="60" y="60" width="880" height="45" rx="15" fill="#0f1720"/>
+
+  <circle cx="90" cy="83" r="6" fill="#ff5f56"/>
+  <circle cx="115" cy="83" r="6" fill="#ffbd2e"/>
+  <circle cx="140" cy="83" r="6" fill="#27c93f"/>
+
+  <text x="170" y="88" fill="#8aa4b2" font-size="14" font-family="monospace">
+    GITHUB CONTROL NODE // max@system
+  </text>
+
+  <!-- LEFT: terminal feed -->
+  <g font-family="monospace" font-size="14" fill="#00ff88" filter="url(#glow)">
+
+    <text x="90" y="150">&gt; boot_sequence.init()</text>
+
+    <text x="90" y="180">&gt; connecting to github api...</text>
+
+    <text x="90" y="210">&gt; pulling user metrics...</text>
+
+    <text x="90" y="240">&gt; commits: loading █</text>
+
+    <text x="90" y="270">&gt; repos: syncing █</text>
+
+    <text x="90" y="300">&gt; stars: aggregating █</text>
+
+    <text x="90" y="330">&gt; system: stable</text>
+
+    <text x="90" y="370">
+      &gt; status: ONLINE
+      <animate attributeName="opacity"
+               values="1;0.4;1"
+               dur="1.2s"
+               repeatCount="indefinite"/>
+    </text>
+
+  </g>
+
+  <!-- RIGHT: stats panel -->
+  <g font-family="monospace" font-size="14" fill="#9be9a8">
+
+    <rect x="600" y="130" width="300" height="380" rx="10" fill="#0a0f14" stroke="#00ff88" stroke-opacity="0.15"/>
+
+    <text x="620" y="170" fill="#00ff88">SYSTEM METRICS</text>
+
+    <text x="620" y="210">COMMITS: 1842+</text>
+    <text x="620" y="240">REPOSITORIES: 42</text>
+    <text x="620" y="270">STARS: 310+</text>
+    <text x="620" y="300">FOLLOWERS: 120+</text>
+
+    <text x="620" y="340" fill="#8aa4b2">GRAPHQL STATUS</text>
+    <text x="620" y="370">latency: 82ms</text>
+    <text x="620" y="400">cache: active</text>
+    <text x="620" y="430">queries: optimized</text>
+
+  </g>
+
+  <!-- SCANLINE -->
+  <rect x="60" y="120" width="880" height="2" fill="#00ff88" opacity="0.25">
+    <animate attributeName="y"
+             from="120" to="520"
+             dur="2.5s"
+             repeatCount="indefinite"/>
+  </rect>
+
+  <!-- subtle glitch overlay -->
+  <rect x="60" y="60" width="880" height="480" fill="white" opacity="0">
+    <animate attributeName="opacity"
+             values="0;0.03;0"
+             dur="3s"
+             repeatCount="indefinite"/>
+  </rect>
+
+</svg>

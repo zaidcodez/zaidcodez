@@ -1,0 +1,69 @@
+<svg width="900" height="500" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Glow filter -->
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Monitor body -->
+  <rect x="30" y="30" width="840" height="440" rx="25" fill="#0b0f14"/>
+  <rect x="60" y="60" width="780" height="380" rx="18" fill="#05080c"/>
+
+  <!-- Screen border glow -->
+  <rect x="60" y="60" width="780" height="380" rx="18"
+        fill="none" stroke="#00ff88" stroke-opacity="0.25" filter="url(#glow)"/>
+
+  <!-- Top bar -->
+  <rect x="60" y="60" width="780" height="40" rx="18" fill="#0f1720"/>
+
+  <circle cx="90" cy="80" r="6" fill="#ff5f56"/>
+  <circle cx="115" cy="80" r="6" fill="#ffbd2e"/>
+  <circle cx="140" cy="80" r="6" fill="#27c93f"/>
+
+  <text x="170" y="85" fill="#8aa4b2" font-size="14" font-family="monospace">
+    neural_profile.sys — max@github
+  </text>
+
+  <!-- SCANNING LINE EFFECT -->
+  <rect x="60" y="110" width="780" height="2" fill="#00ff88" opacity="0.3">
+    <animate attributeName="y"
+             from="110" to="420"
+             dur="3s"
+             repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Terminal text -->
+  <g font-family="monospace" font-size="15" fill="#00ff88">
+
+    <text x="90" y="150">&gt; booting github profile...</text>
+
+    <text x="90" y="180">&gt; loading commits module...</text>
+
+    <text x="90" y="210">&gt; fetching GraphQL data...</text>
+
+    <text x="90" y="250">&gt; USER: max-stickman</text>
+
+    <text x="90" y="280">&gt; REPOSITORIES: syncing...</text>
+
+    <text x="90" y="310">&gt; CONTRIBUTIONS: analyzing...</text>
+
+    <text x="90" y="350">&gt; STATUS: ONLINE</text>
+
+    <!-- blinking cursor -->
+    <text x="90" y="390" fill="#00ff88">
+      █
+      <animate attributeName="opacity"
+               values="1;0;1"
+               dur="0.8s"
+               repeatCount="indefinite"/>
+    </text>
+
+  </g>
+
+</svg>

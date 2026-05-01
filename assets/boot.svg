@@ -1,0 +1,68 @@
+<svg width="1000" height="600" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="600" fill="#05070b"/>
+
+  <!-- BOOT PHASE 1 -->
+  <text x="80" y="120" font-family="monospace" font-size="18" fill="#00ff88">
+    INITIALIZING GITHUB CONTROL NODE...
+    <animate attributeName="opacity" values="1;0;0;0;0;0;0;0;0;0" dur="8s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- BOOT PHASE 2 -->
+  <text x="80" y="160" font-family="monospace" font-size="18" fill="#00ff88">
+    CONNECTING TO GRAPHQL API...
+    <animate attributeName="opacity" values="0;1;1;0;0;0;0;0;0;0" dur="8s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- BOOT PHASE 3 -->
+  <text x="80" y="200" font-family="monospace" font-size="18" fill="#00ff88">
+    SYNCING REPOSITORIES...
+    <animate attributeName="opacity" values="0;0;1;1;0;0;0;0;0;0" dur="8s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- BOOT PHASE 4 -->
+  <text x="80" y="240" font-family="monospace" font-size="18" fill="#00ff88">
+    ANALYZING COMMITS + STARS...
+    <animate attributeName="opacity" values="0;0;0;1;1;0;0;0;0;0" dur="8s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- BOOT PHASE 5 -->
+  <text x="80" y="300" font-family="monospace" font-size="22" fill="#00ff88" filter="url(#glow)">
+    SYSTEM ONLINE — ACCESS GRANTED
+    <animate attributeName="opacity" values="0;0;0;0;1;1;1;0;0;0" dur="8s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- DASHBOARD PHASE -->
+  <rect x="60" y="340" width="880" height="200" rx="15" fill="#0a0f14" stroke="#00ff88" stroke-opacity="0.2"/>
+
+  <text x="90" y="390" font-family="monospace" font-size="16" fill="#9be9a8">
+    COMMITS: 1842+
+    <animate attributeName="opacity" values="0;0;0;0;0;1;1;1;1;1" dur="8s" repeatCount="indefinite"/>
+  </text>
+
+  <text x="90" y="420" font-family="monospace" font-size="16" fill="#9be9a8">
+    REPOSITORIES: 42
+    <animate attributeName="opacity" values="0;0;0;0;0;1;1;1;1;1" dur="8s" repeatCount="indefinite"/>
+  </text>
+
+  <text x="90" y="450" font-family="monospace" font-size="16" fill="#9be9a8">
+    STARS: 310+
+    <animate attributeName="opacity" values="0;0;0;0;0;1;1;1;1;1" dur="8s" repeatCount="indefinite"/>
+  </text>
+
+  <text x="90" y="480" font-family="monospace" font-size="16" fill="#9be9a8">
+    STATUS: LIVE SYSTEM ACTIVE
+    <animate attributeName="opacity" values="0;0;0;0;0;1;1;1;1;1" dur="8s" repeatCount="indefinite"/>
+  </text>
+
+</svg>
