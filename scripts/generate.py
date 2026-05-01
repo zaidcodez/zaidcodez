@@ -96,7 +96,7 @@ def build_svg(s):
     
     <!-- MONITOR SCREEN CLIP -->
     <clipPath id="screen">
-      <rect x="25" y="25" width="950" height="550" rx="28"/>
+      <rect x="20" y="20" width="960" height="560" rx="28"/>
     </clipPath>
 
     <!-- CLIP PATHS (typing effect) -->
@@ -112,7 +112,7 @@ def build_svg(s):
   </defs>
 
   <!-- BG -->
-  
+
   <!-- MONITOR BODY -->
 <rect x="10" y="10" width="980" height="580" rx="35"
       fill="#020409"
