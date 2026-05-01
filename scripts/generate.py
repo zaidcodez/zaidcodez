@@ -13,7 +13,9 @@ def get_stats():
     query($login: String!) {
       user(login: $login) {
         contributionsCollection {
-          totalCommitContributions
+          contributionCalendar {
+            totalContributions
+          }
         }
         repositories {
           totalCount
@@ -31,13 +33,24 @@ def get_stats():
     r = requests.post(
         "https://api.github.com/graphql",
         json={"query": query, "variables": {"login": USER}},
-        headers=HEADERS
+        headers={
+            "Authorization": f"Bearer {TOKEN}"
+        }
     )
 
-    data = r.json()["data"]["user"]
+    res = r.json()
+
+    # 🔥 DEBUG STEP (important)
+    if "errors" in res:
+        raise Exception(res["errors"])
+
+    if "data" not in res or res["data"]["user"] is None:
+        raise Exception(f"Bad response: {res}")
+
+    data = res["data"]["user"]
 
     return {
-        "commits": data["contributionsCollection"]["totalCommitContributions"],
+        "commits": data["contributionsCollection"]["contributionCalendar"]["totalContributions"],
         "repos": data["repositories"]["totalCount"],
         "followers": data["followers"]["totalCount"],
         "stars": data["starredRepositories"]["totalCount"]
@@ -60,7 +73,6 @@ def build_svg(s):
 
     return f"""
 <svg width="1000" height="600" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#screen)">
 
   <defs>
 
@@ -111,6 +123,8 @@ def build_svg(s):
 
   </defs>
 
+  <g clip-path="url(#screen)">
+  
   <!-- BG -->
 
   <!-- MONITOR BODY -->
