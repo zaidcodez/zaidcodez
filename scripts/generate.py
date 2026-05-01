@@ -60,6 +60,7 @@ def build_svg(s):
 
     return f"""
 <svg width="1000" height="600" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#screen)">
 
   <defs>
 
@@ -92,6 +93,11 @@ def build_svg(s):
       <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="1" seed="3" result="n"/>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.2"/>
     </filter>
+    
+    <!-- MONITOR SCREEN CLIP -->
+    <clipPath id="screen">
+      <rect x="25" y="25" width="950" height="550" rx="28"/>
+    </clipPath>
 
     <!-- CLIP PATHS (typing effect) -->
     <clipPath id="clip1"><rect x="70" y="170" width="0" height="25"><animate attributeName="width" from="0" to="320" dur="0.5s" begin="0s" fill="freeze"/></rect></clipPath>
@@ -106,7 +112,18 @@ def build_svg(s):
   </defs>
 
   <!-- BG -->
-  <rect width="1000" height="600" fill="#05070b"/>
+  
+  <!-- MONITOR BODY -->
+<rect x="10" y="10" width="980" height="580" rx="35"
+      fill="#020409"
+      stroke="#7FAFC2"
+      stroke-opacity="0.15"
+      stroke-width="2"/>
+
+      <!-- SCREEN AREA -->
+<rect x="25" y="25" width="950" height="550" rx="28"
+      fill="#05070b"/>
+
   <rect width="1000" height="600" fill="url(#scan)"/>
 
   <!-- TOP BAR -->
@@ -358,6 +375,7 @@ def build_svg(s):
     <animate attributeName="opacity" values="0;0.015;0" dur="4s" repeatCount="indefinite"/>
   </rect>
 
+</g>  
 </svg>
 """
 

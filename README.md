@@ -5,6 +5,6 @@
 
 <div align="center">
 
-<img src="output/dashboard.svg" width="900" style="border-radius: 20px;">
+<img src="output/dashboard.svg" width="900">
 
 </div>
