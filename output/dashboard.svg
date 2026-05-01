@@ -54,20 +54,8 @@
         fill="#0a0f14" stroke="#7FAFC2" stroke-opacity="0.14"/>
 
   <text x="70" y="75" fill="#7FAFC2" font-family="monospace" font-size="22" filter="url(#glow)">
-    GITHUB CONTROL NODE
+    CONTROL PANEL
   </text>
-
-  <!-- LIVE CLOCK -->
-  <text x="650" y="75"
-        fill="#7FAFC2"
-        font-family="monospace"
-        font-size="12"
-        opacity="0">
-    01:40:28
-    <animate attributeName="opacity" from="0" to="0.5" dur="0.3s" begin="5.6s" fill="freeze"/>
-    <animate attributeName="opacity" values="0.5;0.2;0.5" dur="1.3s" begin="6s" repeatCount="indefinite"/>
-  </text>
-
   <text x="820" y="75"
         fill="#7FAFC2"
         font-family="monospace"
@@ -102,7 +90,7 @@
   </text>
 
   <text x="70" y="215" fill="#7FAFC2" font-family="monospace" font-size="15" clip-path="url(#clip2)">
-    > parse_repositories --all ................[OK]
+    > mount_profile_index ................[OK]
   </text>
 
   <text x="70" y="245" fill="#7FAFC2" font-family="monospace" font-size="15" clip-path="url(#clip3)">
@@ -214,7 +202,7 @@
       font-family="monospace"
       font-size="24"
       opacity="0">
-  116
+  121
   <animate attributeName="opacity"
            from="0" to="1"
            dur="0.2s"
@@ -240,7 +228,7 @@
       font-family="monospace"
       font-size="24"
       opacity="0">
-  9
+  10
   <animate attributeName="opacity"
            from="0" to="1"
            dur="0.2s"

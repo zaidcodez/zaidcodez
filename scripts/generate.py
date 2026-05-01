@@ -114,20 +114,8 @@ def build_svg(s):
         fill="#0a0f14" stroke="#7FAFC2" stroke-opacity="0.14"/>
 
   <text x="70" y="75" fill="#7FAFC2" font-family="monospace" font-size="22" filter="url(#glow)">
-    GITHUB CONTROL NODE
+    CONTROL PANEL
   </text>
-
-  <!-- LIVE CLOCK -->
-  <text x="650" y="75"
-        fill="#7FAFC2"
-        font-family="monospace"
-        font-size="12"
-        opacity="0">
-    {__import__('time').strftime('%H:%M:%S')}
-    <animate attributeName="opacity" from="0" to="0.5" dur="0.3s" begin="5.6s" fill="freeze"/>
-    <animate attributeName="opacity" values="0.5;0.2;0.5" dur="1.3s" begin="6s" repeatCount="indefinite"/>
-  </text>
-
   <text x="820" y="75"
         fill="#7FAFC2"
         font-family="monospace"
