@@ -1,0 +1,84 @@
+# ----------------------------
+# Python
+# ----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.pkl
+*.log
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# ----------------------------
+# OS junk
+# ----------------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------------
+# IDE / Editor
+# ----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ----------------------------
+# Environment variables / secrets
+# ----------------------------
+.env
+.env.*
+*.env
+
+# API keys / tokens (just in case)
+secrets.json
+config.json
+
+# ----------------------------
+# Generated SVG / outputs
+# (important for your project)
+# ----------------------------
+*.svg
+output/
+build/
+dist/
+
+# If you're generating GitHub README assets dynamically
+README.svg
+profile.svg
+
+# ----------------------------
+# Logs / runtime artifacts
+# ----------------------------
+logs/
+*.log
+
+# ----------------------------
+# Cache / scraping / API data
+# ----------------------------
+cache/
+*.cache
+requests-cache/
+
+# GitHub / API scraped data (important if you're pulling stats)
+data/
+*.json
+github_data.json
+
+# ----------------------------
+# Node (only if you ever add frontend tooling)
+# ----------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ----------------------------
+# Jupyter (if you ever test visuals there)
+# ----------------------------
+.ipynb_checkpoints/
