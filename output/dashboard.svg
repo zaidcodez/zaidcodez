@@ -220,7 +220,7 @@
       font-family="monospace"
       font-size="24"
       opacity="0">
-  152
+  154
   <animate attributeName="opacity"
            from="0" to="1"
            dur="0.2s"
