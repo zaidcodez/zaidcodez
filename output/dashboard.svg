@@ -71,7 +71,7 @@
   <rect x="40" y="30" width="920" height="70" rx="12"
         fill="#0a0f14" stroke="#7FAFC2" stroke-opacity="0.14"/>
 
-  <text x="70" y="75" fill="#7FAFC2" font-family="monospace" font-size="22" filter="url(#glow)">
+  <text x="370" y="75" fill="#7FAFC2" font-family="monospace" font-size="26" filter="url(#glow)">
     CONTROL PANEL
   </text>
   <text x="820" y="75"
@@ -84,7 +84,7 @@
   </text>
 
   <!-- ACCESS FLASH -->
-  <text x="380" y="95"
+  <text x="830" y="95"
         fill="#7FAFC2"
         font-family="monospace"
         font-size="12"
