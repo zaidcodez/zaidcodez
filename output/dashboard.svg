@@ -108,7 +108,7 @@
   </text>
 
   <text x="70" y="215" fill="#7FAFC2" font-family="monospace" font-size="15" clip-path="url(#clip2)">
-    > resolve_social_links ................[OK]
+    > fetch_user --github ................[OK]
   </text>
 
   <text x="70" y="245" fill="#7FAFC2" font-family="monospace" font-size="15" clip-path="url(#clip3)">
